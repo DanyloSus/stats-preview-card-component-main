@@ -1,7 +1,14 @@
 import React from "react";
+import Img from "./Elements/Img";
+import Section from "./Elements/Section";
 
 function App() {
-  return <h1>Sus</h1>;
+  return (
+    <main>
+      <Section />
+      <Img />
+    </main>
+  );
 }
 
 export default App;
