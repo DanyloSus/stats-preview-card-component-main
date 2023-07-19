@@ -17,6 +17,8 @@ div.img {
 
     z-index: 2;
   }
+
+  animation: img-anim 3s ease-in-out both;
 }
 
 @media screen and (max-width: 850px) {
@@ -26,9 +28,37 @@ div.img {
 
     background-image: url("./image-header-mobile.jpg");
 
+    animation-name: img-anim-m;
+
     div {
       width: 100%;
       height: 100%;
     }
+  }
+}
+
+@keyframes img-anim {
+  0% {
+    position: relative;
+    top: -100%;
+    opacity: 0;
+  }
+  100% {
+    position: relative;
+    top: 0%;
+    opacity: 1;
+  }
+}
+
+@keyframes img-anim-m {
+  0% {
+    position: relative;
+    top: -50%;
+    opacity: 0;
+  }
+  100% {
+    position: relative;
+    top: 0%;
+    opacity: 1;
   }
 }

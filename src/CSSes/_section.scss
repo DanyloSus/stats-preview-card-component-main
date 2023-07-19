@@ -95,3 +95,9 @@ section {
     }
   }
 }
+
+@for $i from 1 through 5 {
+  .anim:nth-child(#{$i}) {
+    @include text-anim(#{$i/2 + 0.5}s);
+  }
+}

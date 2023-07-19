@@ -28,6 +28,18 @@ body {
   background-color: hsl(233, 47%, 7%);
 }
 
+@keyframes text-anim {
+  0% {
+    position: relative;
+    left: -20px;
+    opacity: 0;
+  }
+  100% {
+    position: relative;
+    left: 0px;
+    opacity: 1;
+  }
+}
 main {
   position: absolute;
   top: 50%;
@@ -61,6 +73,7 @@ div.img {
   background-image: url("./image-header-desktop.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  animation: img-anim 3s ease-in-out both;
 }
 div.img div {
   width: 100%;
@@ -75,10 +88,35 @@ div.img div {
     width: 100%;
     height: 31%;
     background-image: url("./image-header-mobile.jpg");
+    animation-name: img-anim-m;
   }
   div.img div {
     width: 100%;
     height: 100%;
+  }
+}
+@keyframes img-anim {
+  0% {
+    position: relative;
+    top: -100%;
+    opacity: 0;
+  }
+  100% {
+    position: relative;
+    top: 0%;
+    opacity: 1;
+  }
+}
+@keyframes img-anim-m {
+  0% {
+    position: relative;
+    top: -50%;
+    opacity: 0;
+  }
+  100% {
+    position: relative;
+    top: 0%;
+    opacity: 1;
   }
 }
 section {
@@ -149,4 +187,23 @@ section .statistic p {
     font-size: 10px;
     margin-top: 0px;
   }
+}
+.anim:nth-child(1) {
+  animation: text-anim 1s ease-in-out 1s both;
+}
+
+.anim:nth-child(2) {
+  animation: text-anim 1s ease-in-out 1.5s both;
+}
+
+.anim:nth-child(3) {
+  animation: text-anim 1s ease-in-out 2s both;
+}
+
+.anim:nth-child(4) {
+  animation: text-anim 1s ease-in-out 2.5s both;
+}
+
+.anim:nth-child(5) {
+  animation: text-anim 1s ease-in-out 3s both;
 }/*# sourceMappingURL=index.css.map */
